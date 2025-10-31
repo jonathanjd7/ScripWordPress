@@ -1,0 +1,220 @@
+2025-10-24 12:17:41,351 [INFO] Login exitoso en WordPress.
+2025-10-24 12:18:03,828 [ERROR] Error general: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b1042605+51877]
+	GetHandleVerifier [0x0x7ff6b1042664+51972]
+	GetHandleVerifier [0x0x7ff6b11f8bf5+1847445]
+	(No symbol) [0x0x7ff6b0e0045b]
+	(No symbol) [0x0x7ff6b0e0071b]
+	(No symbol) [0x0x7ff6b0e41927]
+	(No symbol) [0x0x7ff6b0e2216f]
+	(No symbol) [0x0x7ff6b0df667b]
+	(No symbol) [0x0x7ff6b0e3f3d2]
+	(No symbol) [0x0x7ff6b0e21df3]
+	(No symbol) [0x0x7ff6b0df5b36]
+	(No symbol) [0x0x7ff6b0df4d80]
+	(No symbol) [0x0x7ff6b0df5973]
+	(No symbol) [0x0x7ff6b0ebe4a5]
+	(No symbol) [0x0x7ff6b0eba75d]
+	GetHandleVerifier [0x0x7ff6b106ce43+226019]
+	GetHandleVerifier [0x0x7ff6b105c011+156849]
+	GetHandleVerifier [0x0x7ff6b1064509+190889]
+	GetHandleVerifier [0x0x7ff6b1049744+80868]
+	GetHandleVerifier [0x0x7ff6b1049893+81203]
+	GetHandleVerifier [0x0x7ff6b1037e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:18:06,457 [INFO] Navegador cerrado correctamente.
+2025-10-24 12:18:38,005 [INFO] Login exitoso en WordPress.
+2025-10-24 12:19:05,049 [ERROR] Error general: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b1042605+51877]
+	GetHandleVerifier [0x0x7ff6b1042664+51972]
+	GetHandleVerifier [0x0x7ff6b11f8bf5+1847445]
+	(No symbol) [0x0x7ff6b0e0045b]
+	(No symbol) [0x0x7ff6b0e0071b]
+	(No symbol) [0x0x7ff6b0e41927]
+	(No symbol) [0x0x7ff6b0e2216f]
+	(No symbol) [0x0x7ff6b0df667b]
+	(No symbol) [0x0x7ff6b0e3f3d2]
+	(No symbol) [0x0x7ff6b0e21df3]
+	(No symbol) [0x0x7ff6b0df5b36]
+	(No symbol) [0x0x7ff6b0df4d80]
+	(No symbol) [0x0x7ff6b0df5973]
+	(No symbol) [0x0x7ff6b0ebe4a5]
+	(No symbol) [0x0x7ff6b0eba75d]
+	GetHandleVerifier [0x0x7ff6b106ce43+226019]
+	GetHandleVerifier [0x0x7ff6b105c011+156849]
+	GetHandleVerifier [0x0x7ff6b1064509+190889]
+	GetHandleVerifier [0x0x7ff6b1049744+80868]
+	GetHandleVerifier [0x0x7ff6b1049893+81203]
+	GetHandleVerifier [0x0x7ff6b1037e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:19:07,784 [INFO] Navegador cerrado correctamente.
+2025-10-24 12:19:37,155 [INFO] Login exitoso en WordPress.
+2025-10-24 12:19:44,014 [ERROR] Error general: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.92)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b1042605+51877]
+	GetHandleVerifier [0x0x7ff6b1042664+51972]
+	GetHandleVerifier [0x0x7ff6b11f8bf5+1847445]
+	(No symbol) [0x0x7ff6b0d90e5f]
+	(No symbol) [0x0x7ff6b0e274ec]
+	(No symbol) [0x0x7ff6b0e3ed0a]
+	(No symbol) [0x0x7ff6b0e21df3]
+	(No symbol) [0x0x7ff6b0df5b36]
+	(No symbol) [0x0x7ff6b0df4d80]
+	(No symbol) [0x0x7ff6b0df5973]
+	(No symbol) [0x0x7ff6b0ebe4a5]
+	(No symbol) [0x0x7ff6b0eba75d]
+	GetHandleVerifier [0x0x7ff6b106ce43+226019]
+	GetHandleVerifier [0x0x7ff6b105c011+156849]
+	GetHandleVerifier [0x0x7ff6b1064509+190889]
+	GetHandleVerifier [0x0x7ff6b1049744+80868]
+	GetHandleVerifier [0x0x7ff6b1049893+81203]
+	GetHandleVerifier [0x0x7ff6b1037e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:19:46,623 [INFO] Navegador cerrado correctamente.
+2025-10-24 12:20:02,377 [INFO] Login exitoso en WordPress.
+2025-10-24 12:20:06,657 [ERROR] Error general: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=141.0.3537.92)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b1042605+51877]
+	GetHandleVerifier [0x0x7ff6b1042664+51972]
+	GetHandleVerifier [0x0x7ff6b11f8bf5+1847445]
+	(No symbol) [0x0x7ff6b0d90e5f]
+	(No symbol) [0x0x7ff6b0e274ec]
+	(No symbol) [0x0x7ff6b0e3ed0a]
+	(No symbol) [0x0x7ff6b0e21df3]
+	(No symbol) [0x0x7ff6b0df5b36]
+	(No symbol) [0x0x7ff6b0df4d80]
+	(No symbol) [0x0x7ff6b0df5973]
+	(No symbol) [0x0x7ff6b0ebe4a5]
+	(No symbol) [0x0x7ff6b0eba75d]
+	GetHandleVerifier [0x0x7ff6b106ce43+226019]
+	GetHandleVerifier [0x0x7ff6b105c011+156849]
+	GetHandleVerifier [0x0x7ff6b1064509+190889]
+	GetHandleVerifier [0x0x7ff6b1049744+80868]
+	GetHandleVerifier [0x0x7ff6b1049893+81203]
+	GetHandleVerifier [0x0x7ff6b1037e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:20:36,815 [ERROR] Error general: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=141.0.3537.92); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6b1042605+51877]
+	GetHandleVerifier [0x0x7ff6b1042664+51972]
+	GetHandleVerifier [0x0x7ff6b11f8bf5+1847445]
+	(No symbol) [0x0x7ff6b0da0cd0]
+	(No symbol) [0x0x7ff6b0dbfbba]
+	(No symbol) [0x0x7ff6b0e27734]
+	(No symbol) [0x0x7ff6b0e3ed0a]
+	(No symbol) [0x0x7ff6b0e21df3]
+	(No symbol) [0x0x7ff6b0df5b36]
+	(No symbol) [0x0x7ff6b0df4d80]
+	(No symbol) [0x0x7ff6b0df5973]
+	(No symbol) [0x0x7ff6b0ebe4a5]
+	(No symbol) [0x0x7ff6b0eba75d]
+	GetHandleVerifier [0x0x7ff6b106ce43+226019]
+	GetHandleVerifier [0x0x7ff6b105c011+156849]
+	GetHandleVerifier [0x0x7ff6b1064509+190889]
+	GetHandleVerifier [0x0x7ff6b1049744+80868]
+	GetHandleVerifier [0x0x7ff6b1049893+81203]
+	GetHandleVerifier [0x0x7ff6b1037e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:20:39,589 [INFO] Navegador cerrado correctamente.
+2025-10-24 12:28:36,879 [INFO] Login exitoso en WordPress.
+2025-10-24 12:28:59,616 [ERROR] Error general: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6a2942605+51877]
+	GetHandleVerifier [0x0x7ff6a2942664+51972]
+	GetHandleVerifier [0x0x7ff6a2af8bf5+1847445]
+	(No symbol) [0x0x7ff6a270045b]
+	(No symbol) [0x0x7ff6a270071b]
+	(No symbol) [0x0x7ff6a2741927]
+	(No symbol) [0x0x7ff6a272216f]
+	(No symbol) [0x0x7ff6a26f667b]
+	(No symbol) [0x0x7ff6a273f3d2]
+	(No symbol) [0x0x7ff6a2721df3]
+	(No symbol) [0x0x7ff6a26f5b36]
+	(No symbol) [0x0x7ff6a26f4d80]
+	(No symbol) [0x0x7ff6a26f5973]
+	(No symbol) [0x0x7ff6a27be4a5]
+	(No symbol) [0x0x7ff6a27ba75d]
+	GetHandleVerifier [0x0x7ff6a296ce43+226019]
+	GetHandleVerifier [0x0x7ff6a295c011+156849]
+	GetHandleVerifier [0x0x7ff6a2964509+190889]
+	GetHandleVerifier [0x0x7ff6a2949744+80868]
+	GetHandleVerifier [0x0x7ff6a2949893+81203]
+	GetHandleVerifier [0x0x7ff6a2937e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:29:02,200 [INFO] Navegador cerrado correctamente.
+2025-10-24 12:30:02,063 [INFO] Login exitoso en WordPress.
+2025-10-24 12:30:24,220 [ERROR] Error general: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6a2942605+51877]
+	GetHandleVerifier [0x0x7ff6a2942664+51972]
+	GetHandleVerifier [0x0x7ff6a2af8bf5+1847445]
+	(No symbol) [0x0x7ff6a270045b]
+	(No symbol) [0x0x7ff6a270071b]
+	(No symbol) [0x0x7ff6a2741927]
+	(No symbol) [0x0x7ff6a272216f]
+	(No symbol) [0x0x7ff6a26f667b]
+	(No symbol) [0x0x7ff6a273f3d2]
+	(No symbol) [0x0x7ff6a2721df3]
+	(No symbol) [0x0x7ff6a26f5b36]
+	(No symbol) [0x0x7ff6a26f4d80]
+	(No symbol) [0x0x7ff6a26f5973]
+	(No symbol) [0x0x7ff6a27be4a5]
+	(No symbol) [0x0x7ff6a27ba75d]
+	GetHandleVerifier [0x0x7ff6a296ce43+226019]
+	GetHandleVerifier [0x0x7ff6a295c011+156849]
+	GetHandleVerifier [0x0x7ff6a2964509+190889]
+	GetHandleVerifier [0x0x7ff6a2949744+80868]
+	GetHandleVerifier [0x0x7ff6a2949893+81203]
+	GetHandleVerifier [0x0x7ff6a2937e16+8886]
+	BaseThreadInitThunk [0x0x7ffbac487374+20]
+	RtlUserThreadStart [0x0x7ffbad5fcc91+33]
+
+2025-10-24 12:30:26,801 [INFO] Navegador cerrado correctamente.
+2025-10-31 10:22:43,266 [INFO] Login exitoso en WordPress.
+2025-10-31 10:23:02,334 [ERROR] Error general: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7c3972605+51877]
+	GetHandleVerifier [0x0x7ff7c3972664+51972]
+	GetHandleVerifier [0x0x7ff7c3b28bf5+1847445]
+	(No symbol) [0x0x7ff7c373045b]
+	(No symbol) [0x0x7ff7c373071b]
+	(No symbol) [0x0x7ff7c3771927]
+	(No symbol) [0x0x7ff7c375216f]
+	(No symbol) [0x0x7ff7c372667b]
+	(No symbol) [0x0x7ff7c376f3d2]
+	(No symbol) [0x0x7ff7c3751df3]
+	(No symbol) [0x0x7ff7c3725b36]
+	(No symbol) [0x0x7ff7c3724d80]
+	(No symbol) [0x0x7ff7c3725973]
+	(No symbol) [0x0x7ff7c37ee4a5]
+	(No symbol) [0x0x7ff7c37ea75d]
+	GetHandleVerifier [0x0x7ff7c399ce43+226019]
+	GetHandleVerifier [0x0x7ff7c398c011+156849]
+	GetHandleVerifier [0x0x7ff7c3994509+190889]
+	GetHandleVerifier [0x0x7ff7c3979744+80868]
+	GetHandleVerifier [0x0x7ff7c3979893+81203]
+	GetHandleVerifier [0x0x7ff7c3967e16+8886]
+	BaseThreadInitThunk [0x0x7ffde3ebe8d7+23]
+	RtlUserThreadStart [0x0x7ffde54ec53c+44]
+
+2025-10-31 10:23:04,713 [INFO] Navegador cerrado correctamente.

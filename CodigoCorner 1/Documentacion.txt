@@ -1,0 +1,15 @@
+1.- Instalar python si no lo tiene instalado en el PC.
+
+2.- Para instalar las librerias necesarias abrir cmd y ejecutar los siguientes comandos
+
+	a) 	pip install selenium
+	b)	pip install python-docx
+	c)	pip install webdriver-manager
+
+3.- En la linea 29 del código (corner.py) cambiar la ruta donde se tendrán los word para subir. 
+
+4.- En caso de cambiar la contraseña de corner hay que ir a la linea 45 del código y se deberá cambiar. Se encuentra al final de la linea justo antes del parentesis y entre comillas.
+
+
+
+En el documento word el título dejarlo como texto plano, no poner en negrita

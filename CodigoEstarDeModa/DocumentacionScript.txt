@@ -1,0 +1,408 @@
+================================================================================
+               DOCUMENTACIÓN DEL SCRIPT - EstarDeModa.py
+================================================================================
+
+AUTOR: Script de Automatización WordPress
+VERSIÓN: 2.0
+FECHA: 2025
+SITIO WEB: https://estardemoda.net
+
+================================================================================
+1. ¿QUÉ HACE ESTE SCRIPT?
+================================================================================
+
+Este script automatiza la publicación de contenido en WordPress desde documentos
+Word (.docx). Lee archivos Word con un formato específico y crea automáticamente
+borradores de posts en WordPress con:
+
+✓ Título del artículo
+✓ Descripción con formato HTML (negritas, cursivas, listas)
+✓ Frase clave objetivo (SEO)
+✓ Título SEO
+✓ Meta descripción
+✓ Categorías (crea las que no existan)
+✓ Etiquetas
+
+================================================================================
+2. REQUISITOS PREVIOS
+================================================================================
+
+INSTALACIONES NECESARIAS:
+-------------------------
+1. Python 3.9 o superior
+2. Google Chrome (navegador)
+3. Módulos Python:
+   - python-docx (para leer archivos Word)
+   - selenium (para automatizar el navegador)
+
+INSTALACIÓN DE MÓDULOS:
+-----------------------
+Ejecutar en la terminal:
+    pip install python-docx selenium
+
+================================================================================
+3. CONFIGURACIÓN DEL SCRIPT
+================================================================================
+
+UBICACIÓN: Líneas 15-19 del script
+
+PARÁMETROS A CONFIGURAR:
+------------------------
+1. url_wp: URL del panel de administración de WordPress
+   Ejemplo: 'https://estardemoda.net/wp-admin'
+
+2. usuario_wp: Nombre de usuario de WordPress
+   Ejemplo: 'esther'
+
+3. password_wp: Contraseña de WordPress
+   Ejemplo: 'tu_contraseña_aquí'
+
+4. carpeta_word: Ruta completa a la carpeta con archivos Word
+   Ejemplo: r"C:\Users\Jonathan JD\Desktop\pink\Robert\CodigoEstarDeModa"
+
+IMPORTANTE: Mantén estas credenciales seguras y no las compartas.
+
+================================================================================
+4. ESTRUCTURA DEL DOCUMENTO WORD
+================================================================================
+
+El documento Word DEBE tener la siguiente estructura:
+
+FORMATO REQUERIDO:
+------------------
+
+Titulo de la ficha
+[nombre del artículo aquí]
+
+Descripción:
+[contenido del artículo con formato]
+- Puedes usar negritas
+- Puedes usar cursivas
+- Puedes crear listas
+- Puedes usar encabezados
+
+Frase clave objetivo
+[palabra clave principal para SEO]
+
+Título SEO
+[título optimizado para motores de búsqueda]
+
+Meta description
+[descripción breve de 150-160 caracteres]
+
+Categorías
+[Categoría 1, Categoría 2, Categoría 3]
+(Separadas por comas)
+
+Etiquetas
+[etiqueta1, etiqueta2, etiqueta3]
+
+NOTAS IMPORTANTES:
+------------------
+✓ Los títulos de sección pueden estar con o sin tilde
+✓ Las categorías se pueden separar por comas en una sola línea
+✓ Si una categoría no existe, el script la creará automáticamente
+✓ El formato (negritas, cursivas) se preserva automáticamente
+✓ Las listas se convierten automáticamente a HTML
+
+================================================================================
+5. ¿CÓMO FUNCIONA EL SCRIPT? - PASO A PASO
+================================================================================
+
+FASE 1: INICIALIZACIÓN
+----------------------
+1. Lee todos los archivos .docx de la carpeta configurada
+2. Ignora archivos temporales (que empiezan con ~$)
+3. Muestra cuántos archivos encontró
+4. Abre el navegador Chrome automáticamente
+
+FASE 2: LOGIN EN WORDPRESS
+---------------------------
+5. Navega a la página de login de WordPress
+6. Introduce usuario y contraseña automáticamente
+7. Hace clic en el botón de login
+8. Espera a que cargue el panel de administración
+
+FASE 3: PROCESAMIENTO DE CADA ARCHIVO (se repite para cada documento)
+----------------------------------------------------------------------
+
+3.1 LECTURA DEL DOCUMENTO:
+   - Abre el archivo Word
+   - Extrae el título (busca "Titulo de la ficha" y variaciones)
+   - Extrae la descripción (busca "Descripción:" y su contenido)
+   - Convierte el formato Word a HTML:
+     * Negritas → <strong>
+     * Cursivas → <em>
+     * Subrayado → <u>
+     * Listas → <ul><li>
+   - Extrae frase clave objetivo
+   - Extrae título SEO
+   - Extrae meta descripción
+   - Extrae categorías (divide por comas si hay varias)
+   - Extrae etiquetas
+
+3.2 CREACIÓN DEL POST EN WORDPRESS:
+   a) Navega a "Añadir nueva entrada"
+   b) Inserta el título en el campo correspondiente
+   
+   c) Inserta la descripción usando Visual Composer:
+      - Hace clic en "Añadir elemento"
+      - Selecciona "Bloque de Texto"
+      - Cambia a modo código HTML
+      - Pega el contenido formateado
+      - Guarda el bloque
+   
+   d) Inserta la frase clave en Yoast SEO
+   e) Inserta el título SEO en Yoast SEO
+   f) Inserta la meta descripción en Yoast SEO
+   
+   g) Configura las categorías:
+      - Busca cada categoría en la lista
+      - Si existe: la selecciona (con JavaScript para evitar errores)
+      - Si NO existe: 
+        * Hace clic en "Añadir nueva categoría"
+        * Escribe el nombre
+        * La crea
+        * La selecciona automáticamente
+   
+   h) Inserta las etiquetas en el campo correspondiente
+
+3.3 GUARDADO:
+   - Hace clic en "Guardar borrador"
+   - Verifica que se guardó correctamente
+   - Si falla, intenta con método alternativo (Ctrl+S)
+   - Muestra mensaje de éxito o error
+
+FASE 4: FINALIZACIÓN
+---------------------
+9. Repite FASE 3 para cada archivo Word encontrado
+10. Muestra resumen final:
+    - Total de archivos procesados
+    - Archivos guardados exitosamente
+    - Archivos fallidos (si los hay)
+11. Cierra el navegador automáticamente
+
+================================================================================
+6. ¿CÓMO USAR EL SCRIPT?
+================================================================================
+
+PASO 1: PREPARAR LOS DOCUMENTOS WORD
+-------------------------------------
+- Crea tus documentos Word con el formato descrito arriba
+- Guárdalos en la carpeta configurada en el script
+- Asegúrate de que tengan extensión .docx
+
+PASO 2: CONFIGURAR EL SCRIPT
+-----------------------------
+- Abre el archivo EstarDeModa.py con un editor de texto
+- Modifica las líneas 15-19 con tus datos
+- Guarda los cambios
+
+PASO 3: EJECUTAR EL SCRIPT
+---------------------------
+Opción A - Desde la terminal:
+    1. Abre la terminal/PowerShell
+    2. Navega a la carpeta del script:
+       cd "C:\Users\Jonathan JD\Desktop\pink\Robert\CodigoEstarDeModa"
+    3. Ejecuta:
+       python EstarDeModa.py
+
+Opción B - Desde el editor:
+    1. Abre el archivo en VS Code u otro editor
+    2. Presiona F5 o clic en "Run"
+
+PASO 4: OBSERVAR EL PROCESO
+----------------------------
+- El navegador Chrome se abrirá automáticamente
+- Verás cómo se van procesando los archivos
+- En la consola verás mensajes de progreso:
+  [INFO] - Información general
+  [OK] - Operación exitosa
+  [WARNING] - Advertencia (no crítico)
+  [ERROR] - Error (requiere atención)
+  [DEBUG] - Información de depuración
+  [SUCCESS] - Proceso completado exitosamente
+
+PASO 5: VERIFICAR RESULTADOS
+-----------------------------
+- Al finalizar, verás un resumen en la consola
+- Ve a tu WordPress → Entradas → Borradores
+- Verifica que los posts se crearon correctamente
+- Revisa y publica cuando estés listo
+
+================================================================================
+7. MENSAJES DEL SCRIPT - QUÉ SIGNIFICAN
+================================================================================
+
+[INFO] Se encontraron 3 archivos Word
+    → El script encontró 3 documentos .docx para procesar
+
+[INFO] Procesando: Mi_Articulo.docx
+    → Está procesando ese archivo específico
+
+[INFO] Título: Mi Título Aquí
+    → Extrajo el título correctamente
+
+[WARNING] Descripción: [VACÍA - REVISAR DOCUMENTO]
+    → No encontró la descripción, revisa el formato del Word
+
+[DEBUG] Total de categorías detectadas: 3
+    → Encontró 3 categorías en el documento
+
+[OK] Categoría seleccionada: Recetas
+    → Seleccionó una categoría existente
+
+[OK] Categoría 'Helados' creada exitosamente
+    → Creó una nueva categoría porque no existía
+
+[SUCCESS] Post 'Mi Título' guardado como borrador con éxito!
+    → El post se guardó correctamente en WordPress
+
+[ERROR] No se pudo seleccionar la categoría 'XYZ'
+    → Hubo un problema con esa categoría específica
+
+================================================================================
+8. RESOLUCIÓN DE PROBLEMAS
+================================================================================
+
+PROBLEMA: "ModuleNotFoundError: No module named 'docx'"
+SOLUCIÓN: Instalar el módulo python-docx
+    pip install python-docx
+
+PROBLEMA: "ModuleNotFoundError: No module named 'selenium'"
+SOLUCIÓN: Instalar selenium
+    pip install selenium
+
+PROBLEMA: "Unable to locate or obtain driver"
+SOLUCIÓN: El script usa Chrome automáticamente. Asegúrate de tener Chrome instalado.
+
+PROBLEMA: Título o descripción vacíos
+SOLUCIÓN: Verifica que tu documento Word tenga exactamente:
+    - "Titulo de la ficha" (o variaciones)
+    - "Descripción:" (o variaciones)
+
+PROBLEMA: Categorías no se crean
+SOLUCIÓN: 
+    1. Verifica que el usuario de WordPress tenga permisos para crear categorías
+    2. Revisa que las categorías estén separadas por comas
+    3. Mira los mensajes [DEBUG] para ver qué categorías detectó
+
+PROBLEMA: El navegador se abre pero no hace nada
+SOLUCIÓN:
+    1. Verifica las credenciales de WordPress
+    2. Verifica que la URL sea correcta
+    3. Asegúrate de tener buena conexión a internet
+
+PROBLEMA: "element click intercepted"
+SOLUCIÓN: Ya está resuelto en esta versión con JavaScript click
+
+PROBLEMA: Formato se pierde en WordPress
+SOLUCIÓN: El script preserva:
+    - Negritas, cursivas, subrayado
+    - Listas con viñetas
+    - Encabezados
+    Si no se ve, verifica que Visual Composer esté activo
+
+================================================================================
+9. CARACTERÍSTICAS AVANZADAS
+================================================================================
+
+PROCESAMIENTO EN LOTE:
+----------------------
+El script procesa TODOS los archivos .docx de la carpeta automáticamente.
+No necesitas ejecutarlo múltiples veces.
+
+RECUPERACIÓN DE ERRORES:
+------------------------
+Si un archivo falla, el script continúa con los siguientes.
+Al final verás un resumen de cuáles fallaron.
+
+JAVASCRIPT CLICK:
+-----------------
+Usa JavaScript para hacer clic en elementos, evitando que la barra de 
+administración de WordPress bloquee las acciones.
+
+CREACIÓN AUTOMÁTICA:
+-------------------
+Si una categoría no existe, la crea automáticamente y la selecciona.
+
+DETECCIÓN FLEXIBLE:
+------------------
+Busca títulos y descripciones con múltiples variaciones:
+- Con o sin tilde
+- Con o sin dos puntos
+- En mayúsculas o minúsculas
+
+FORMATO MÚLTIPLE:
+-----------------
+Soporta texto con varios formatos simultáneos:
+negrita + cursiva + subrayado al mismo tiempo.
+
+================================================================================
+10. MANTENIMIENTO Y ACTUALIZACIONES
+================================================================================
+
+CAMBIAR CREDENCIALES:
+---------------------
+Edita las líneas 15-19 del script con las nuevas credenciales.
+
+CAMBIAR CARPETA DE ARCHIVOS:
+----------------------------
+Modifica la línea 19 (carpeta_word) con la nueva ruta.
+
+ACTUALIZAR PYTHON:
+------------------
+Si actualizas Python, reinstala los módulos:
+    pip install --upgrade python-docx selenium
+
+VER VERSIÓN DEL SCRIPT:
+-----------------------
+Línea 2 del script o línea 5 de este documento.
+
+================================================================================
+11. LIMITACIONES Y CONSIDERACIONES
+================================================================================
+
+✓ Solo procesa archivos .docx (no .doc antiguos)
+✓ Requiere conexión a internet
+✓ Requiere permisos de administrador en WordPress
+✓ El navegador debe permanecer abierto durante el proceso
+✓ No cierres la ventana del navegador manualmente
+✓ Los archivos Word deben seguir el formato especificado
+✓ Crea BORRADORES, no publica automáticamente (por seguridad)
+
+================================================================================
+12. SOPORTE Y CONTACTO
+================================================================================
+
+Si tienes problemas:
+1. Lee esta documentación completa
+2. Revisa la sección "Resolución de Problemas"
+3. Verifica los mensajes de error en la consola
+4. Asegúrate de que el formato del Word sea correcto
+
+El script está diseñado para ser robusto y mostrar mensajes claros.
+Los mensajes [ERROR] y [WARNING] te indicarán exactamente qué revisar.
+
+================================================================================
+13. NOTAS FINALES
+================================================================================
+
+✓ El script guarda como BORRADOR, no publica automáticamente
+✓ Esto te permite revisar antes de publicar
+✓ Las credenciales se mantienen en el script (mantenlas seguras)
+✓ Puedes ejecutar el script múltiples veces sin problema
+✓ Los borradores duplicados se actualizarán en WordPress
+
+BUENAS PRÁCTICAS:
+-----------------
+1. Haz una copia de seguridad de tus archivos Word
+2. Prueba primero con 1-2 archivos
+3. Revisa los borradores en WordPress antes de publicar
+4. Mantén el formato Word consistente
+5. No interrumpas el script mientras está ejecutándose
+
+================================================================================
+                            ¡ÉXITO EN TU AUTOMATIZACIÓN!
+================================================================================
+
